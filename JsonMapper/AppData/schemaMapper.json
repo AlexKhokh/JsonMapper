@@ -1,0 +1,154 @@
+{
+  "schemaArray": [
+    {
+      "MapperOne": {
+        "type": "object",
+        "properties": {
+          "Insurer": {
+            "type": "object",
+            "properties": {
+              "FirstName": { "type": "string" },
+              "LastName": { "type": "string" }
+            },
+            "required": [ "FirstName", "LastName" ],
+            "additionalProperties": false
+          },
+          "Vehicle": {
+            "type": "object",
+            "properties": {
+              "Mark": { "type": "string" },
+              "Model": { "type": "string" }
+            },
+            "required": [ "Mark", "Model" ],
+            "additionalProperties": false
+          },
+          "DateBegin": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          },
+          "DateEnd": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          }
+        },
+        "required": [ "Insurer", "Vehicle", "DateBegin", "DateEnd" ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "MapperTwo": {
+        "type": "object",
+        "properties": {
+          "InsurerFirstName": { "type": "string" },
+          "InsurerLastName": { "type": "string" },
+          "Vehicle": {
+            "type": "object",
+            "properties": {
+              "Mark": { "type": "string" },
+              "Model": { "type": "string" }
+            },
+            "required": [ "Mark", "Model" ],
+            "additionalProperties": false
+          },
+          "EffectiveDate": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          },
+          "ExpirationDate": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          }
+        },
+        "required": [ "InsurerFirstName", "InsurerLastName", "Vehicle", "EffectiveDate", "ExpirationDate" ],
+        "additionalProperties": false
+
+      }
+    },
+    {
+      "MapperThree": {
+        "type": "object",
+        "properties": {
+          "Insurer": {
+            "type": "object",
+            "properties": {
+              "Person": {
+                "type": "object",
+                "properties": {
+                  "InsurerFirstName": { "type": "string" },
+                  "InsurerLastName": { "type": "string" }
+                },
+                "required": [ "InsurerFirstName", "InsurerLastName" ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "VehicleMark": { "type": "string" },
+          "VehicleModel": { "type": "string" },
+          "DateBegin": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          },
+          "DateEnd": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          }
+        },
+        "required": [ "Insurer", "VehicleMark", "VehicleModel", "DateBegin", "DateEnd" ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "Default": {
+        "type": "object",
+        "properties": {
+          "Insurer": {
+            "type": "object",
+            "properties": {
+              "Name": { "type": "string" }
+            },
+            "required": [ "Name" ],
+            "additionalProperties": false
+          },
+          "Vehicle": {
+            "type": "object",
+            "properties": {
+              "MarkName": { "type": "string" },
+              "ModelName": { "type": "string" }
+            },
+            "required": [ "MarkName", "ModelName" ],
+            "additionalProperties": false
+          },
+          "EffectiveDate": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          },
+          "ExpirationDate": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          },
+          "AcceptationDate": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          },
+          "DocumentDate": {
+            "type": "string",
+            "format": "date",
+            "required": true
+          }
+        },
+        "required": [ "Insurer", "Vehicle", "ExpirationDate", "EffectiveDate" ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}
+
